@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Adicionar tarefa</h2>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <input matInput formControlName="email" type="text" required>
+      <mat-error *ngIf="form.get('description').hasError('required')">
+        Descrição é obrigatoria
+      </mat-error>
+    </mat-form-field>
+    <button (click) = "submitForm()" type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Inserir</button>
+  </form>
+</mat-dialog-content>
+

@@ -1,0 +1,25 @@
+section {
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+mat-card {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  span {
+    display: flex;
+  }
+}
+
+.btnAdd {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}

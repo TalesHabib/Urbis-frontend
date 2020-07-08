@@ -1,0 +1,25 @@
+<section>
+  <h1>Lista de tarefas</h1>
+  <div *ngFor="let task of listTask">
+    <mat-card>
+      <span>{{task.description}}</span>
+      <div>
+        <button mat-icon-button color="primary" matTooltip="Editar tarefa" matTooltipPosition="above">
+          <mat-icon>
+            edit
+          </mat-icon>
+        </button>
+        <button mat-icon-button color="warn" matTooltip="Excluir tarefa" matTooltipPosition="above" (click)="openRemoveDialog(task.id)" >
+          <mat-icon>
+            delete
+          </mat-icon>
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</section>
+
+<button class="btnAdd" mat-fab color="primary" matTooltip="Adicionar tarefa"
+matTooltipPosition="left">
+  <mat-icon>add</mat-icon>
+</button>
